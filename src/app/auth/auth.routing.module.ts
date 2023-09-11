@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './pages/layout/layout.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: LayoutComponent
+        component: LayoutComponent,
+        children: [
+            { path: 'login', component: LoginComponent },
+            { path: 'new-account', component: RegisterComponent },
+            { path: '**', redirectTo: 'login' }
+        ]
     }
 ];
 
