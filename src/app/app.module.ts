@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { LayoutComponent } from './auth/pages/layout/layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutHeroeComponent } from './heroes/pages/layout-heroe/layout-heroe.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { LayoutHeroeComponent } from './heroes/pages/layout-heroe/layout-heroe.c
     AppRoutingModule,
     RouterModule,
     SharedModule,
+    MaterialModule,
     BrowserAnimationsModule
   ],
   providers: [],
