@@ -3,10 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { MaterialModule } from '../material/material.module';
+import { ListComponent } from './pages/list/list.component';
+import { CardComponent } from './components/card/card.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ListComponent,
+    CardComponent
+  ],
   imports: [
     CommonModule,
     HeroesRoutingModule,
