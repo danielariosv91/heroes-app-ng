@@ -3,7 +3,18 @@
 
     <mat-form-field class="example-full-width">
         <mat-label>Number</mat-label>
-        <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="searchInput">
-   
+        <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="searchInput"
+            [matAutocomplete]="auto" (optionSelected)="onSelectedOption($event)" (input)="searchHero()">
+
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let hero of heroes" [value]="hero">
+                {{hero.superhero}}
+            </mat-option>
+            <mat-option *ngIf="heroes.length === 0 && searchInput.value?.length">
+                No results for {{searchInput.value}}
+            </mat-option>
+        </mat-autocomplete>
     </mat-form-field>
+
+    {{selectedHero}}
 </div>
