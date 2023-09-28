@@ -10,6 +10,7 @@ import { HeroComponent } from './pages/hero/hero.component';
 import { LayoutHeroeComponent } from './pages/layout-heroe/layout-heroe.component';
 import { NewComponent } from './pages/new/new.component';
 import { SearchComponent } from './pages/search/search.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { SearchComponent } from './pages/search/search.component';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     HeroesRoutingModule,
     MaterialModule
   ]
